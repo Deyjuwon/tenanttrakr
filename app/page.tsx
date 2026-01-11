@@ -135,7 +135,28 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="bg-white rounded-2xl" />
+            <div className="bg-white rounded-2xl p-5 flex flex-col gap-4">
+              <h2 className="font-bold text-[16px]">Due This Month</h2>
+
+              {[
+                { name: "Adebayo Chinedu", house: "Jay’s House", amount: "₦3,500,000" },
+                { name: "Ibrahim Musa", house: "Green Court", amount: "₦1,200,000" },
+                { name: "Funke Adele", house: "Palm View", amount: "₦850,000" },
+              ].map((tenant, i) => (
+                <div key={i} className="flex justify-between items-center border-b last:border-none pb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="relative h-10 w-10 rounded-full overflow-hidden">
+                      <Image src={profile} alt="tenant" fill className="object-cover" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-[14px]">{tenant.name}</p>
+                      <p className="text-[13px] text-gray-500">{tenant.house}</p>
+                    </div>
+                  </div>
+                  <p className="text-green-500 font-semibold text-[14px]">{tenant.amount}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </main>
