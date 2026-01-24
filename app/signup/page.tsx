@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import logo from "@/public/logo.png";
 
-export default function LoginPage() {
+export default function SignupPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -19,18 +19,28 @@ export default function LoginPage() {
         {/* Header */}
         <div className="text-center mb-6">
           <h1 className="text-[22px] font-semibold text-gray-900">
-            Welcome back
+            Create an account
           </h1>
           <p className="text-[14px] text-gray-500 mt-1">
-            Login to manage your properties
+            Start tracking tenants and rent easily
           </p>
         </div>
 
         {/* Form */}
         <form className="flex flex-col gap-4">
+          {/* Full Name */}
+          <div>
+            <label className="text-[13px] text-gray-600">Full name</label>
+            <input
+              type="text"
+              placeholder="Adejuwon Oshindoro"
+              className="w-full text-[12px] mt-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
+            />
+          </div>
+
           {/* Email */}
           <div>
-            <label className="text-[13px] text-gray-600">Email</label>
+            <label className="text-[12px] text-gray-600">Email</label>
             <input
               type="email"
               placeholder="you@email.com"
@@ -40,11 +50,11 @@ export default function LoginPage() {
 
           {/* Password */}
           <div>
-            <label className="text-[13px] text-gray-600">Password</label>
+            <label className="text-[12px] text-gray-600">Password</label>
             <div className="relative mt-1">
               <input
                 type={showPassword ? "text" : "password"}
-                placeholder="••••••••"
+                placeholder="Create a strong password"
                 className="w-full text-[12px] px-4 py-2 pr-12 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
               <button
@@ -62,15 +72,15 @@ export default function LoginPage() {
             type="submit"
             className="mt-2 bg-teal-600 text-white py-2 rounded-md font-medium hover:bg-teal-700 transition"
           >
-            Login
+            Create account
           </button>
         </form>
 
         {/* Footer */}
         <p className="text-center text-[13px] text-gray-500 mt-6">
-          Don’t have an account?{" "}
-          <a href="/signup" className="text-teal-600 font-medium hover:underline">
-            Sign up
+          Already have an account?{" "}
+          <a href="/login" className="text-teal-600 font-medium hover:underline">
+            Login
           </a>
         </p>
       </div>
