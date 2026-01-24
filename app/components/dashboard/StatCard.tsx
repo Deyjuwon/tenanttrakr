@@ -15,7 +15,7 @@ export default function StatCard({ title, value, sub, primary, color }: Props) {
           : "bg-[#f5f5f7] text-[#1d1d1d]"
       }`}
     >
-      <p className="text-[14px] opacity-90">{title}</p>
+      <p className="text-[14px] opacity-90 font-semibold">{title}</p>
       <div>
         <p className="text-[32px] font-bold">{value}</p>
         <p className={`text-[12px] font-semibold ${color || "opacity-80"}`}>

@@ -9,7 +9,7 @@ import { IoLogOut } from "react-icons/io5";
 
 export default function Sidebar() {
   return (
-    <aside className="w-[15%] bg-[#E5E7EB] rounded-lg px-4 pb-5 flex flex-col gap-6">
+    <aside className="w-[15%] bg-[#E5E7EB] rounded-lg px-4 pb-5 flex flex-col gap-6 text-[#1d1d1d]">
       <Image src={logo} alt="Tenanttrakr logo" className="w-[75%]" priority />
 
       <div className="flex flex-col gap-2 text-[15px]">
