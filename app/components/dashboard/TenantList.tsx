@@ -17,7 +17,7 @@ export default function TenantList({ title }: Props) {
 
   return (
     <div className="bg-white rounded-2xl p-5 flex flex-col gap-4">
-      <h2 className="font-bold text-[16px] text-[#1d1d1d]">{title}</h2>
+      <h2 className="font-bold text-[16px]  ">{title}</h2>
 
       {tenants.map((tenant, i) => (
         <div
@@ -30,7 +30,7 @@ export default function TenantList({ title }: Props) {
             </div>
 
             <div>
-              <p className="font-semibold text-[14px] text-[#1d1d1d]">{tenant.name}</p>
+              <p className="font-semibold text-[14px]  ">{tenant.name}</p>
               <p className="text-[13px] text-gray-500">{tenant.house}</p>
             </div>
           </div>

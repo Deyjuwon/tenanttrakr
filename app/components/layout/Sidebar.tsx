@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "../../../public/logo.png";
+import Link from "next/link";
 
 import { MdDashboard } from "react-icons/md";
 import { FaHouse } from "react-icons/fa6";
@@ -15,16 +16,20 @@ export default function Sidebar() {
       <div className="flex flex-col gap-2 text-[15px]">
         <p className="text-[10px] text-gray-500 uppercase">Menu</p>
 
-        <div className="relative flex items-center gap-4 px-3 py-2 bg-white rounded-md font-medium">
-          <span className="absolute left-0 top-0 h-full w-[3px] bg-teal-500 rounded-r" />
-          <MdDashboard size={20} color="#1A4D6D" />
-          <p>Dashboard</p>
-        </div>
+        <Link href={'/'}>
+          <div className="relative flex items-center gap-4 px-3 py-2 bg-white rounded-md font-medium">
+            <span className="absolute left-0 top-0 h-full w-[3px] bg-teal-500 rounded-r" />
+            <MdDashboard size={20} color="#1A4D6D" />
+            <p>Dashboard</p>
+          </div>
+        </Link>
 
-        <div className="flex items-center gap-4 px-3 py-2 rounded-md hover:bg-white">
-          <FaHouse size={20} color="#1A4D6D" />
-          <p>Properties</p>
-        </div>
+        <Link href={'/properties'}>
+          <div className="flex items-center gap-4 px-3 py-2 rounded-md hover:bg-white cursor-pointer">
+            <FaHouse size={20} color="#1A4D6D" />
+            <p>Properties</p>
+          </div>
+        </Link>
 
         <div className="flex items-center gap-4 px-3 py-2 rounded-md hover:bg-white">
           <BsFillPeopleFill size={20} color="#1A4D6D" />

@@ -34,7 +34,7 @@ export default function LoginPage() {
             <input
               type="email"
               placeholder="you@email.com"
-              className="w-full text-[12px] mt-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full text-[13px] mt-1 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
           </div>
 
@@ -45,12 +45,12 @@ export default function LoginPage() {
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
-                className="w-full text-[12px] px-4 py-2 pr-12 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full text-[13px] px-4 py-2 pr-12 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute text-[12px] right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm"
+                className="absolute text-[13px] right-3 top-1/2 -translate-y-1/2 text-gray-500 text-sm"
               >
                 {showPassword ? "Hide" : "Show"}
               </button>
