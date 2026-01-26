@@ -13,9 +13,11 @@ export default function DashboardHeader() {
           </button>
         </Link>
 
-        <button className="px-5 cursor-pointer py-2.5 rounded-lg border border-[#1A4D6D] text-[#1A4D6D] text-[14px] hover:bg-[#1A4D6D] hover:text-white transition">
-          + Add Tenant
-        </button>
+        <Link href={"/tenants/new"}>
+          <button className="px-5 cursor-pointer py-2.5 rounded-lg border border-[#1A4D6D] text-[#1A4D6D] text-[14px] hover:bg-[#1A4D6D] hover:text-white transition">
+            + Add Tenant
+          </button>
+        </Link>
       </div>
     </div>
   );
