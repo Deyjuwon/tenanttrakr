@@ -53,12 +53,13 @@ export default function PropertyDetailsPage() {
     );
 
     localStorage.setItem("tenants", JSON.stringify(updatedTenants));
-
-    // Update UI immediately
     setTenants((prev) => prev.filter((t) => t.id !== tenantId));
   };
 
   if (!property) return null;
+
+  const occupiedUnits = tenants.length;
+  const isFull = occupiedUnits >= property.units;
 
   return (
     <div className="flex h-screen bg-[#F6F7F9] gap-4 p-4">
@@ -69,13 +70,42 @@ export default function PropertyDetailsPage() {
 
         <div className="flex-1 bg-[#E5E7EB] rounded-lg p-6 flex flex-col gap-6">
           {/* Property Info */}
-          <div>
-            <h1 className="text-[22px] font-bold text-[#1A4D6D]">
-              {property.name}
-            </h1>
-            <p className="text-[13px] text-gray-600">
-              {property.address}
-            </p>
+          <div className="bg-white rounded-lg p-5 shadow-sm flex justify-between items-center">
+            <div>
+              <h1 className="text-[22px] font-bold text-[#1A4D6D]">
+                {property.name}
+              </h1>
+              <p className="text-[13px] text-gray-600">
+                {property.address}
+              </p>
+            </div>
+
+            {/* Units & Occupancy */}
+            <div className="flex gap-6">
+              <div className="text-center">
+                <p className="text-[12px] text-gray-500">Units</p>
+                <p className="text-[18px] font-semibold">
+                  {property.units}
+                </p>
+              </div>
+
+              <div className="text-center">
+                <p className="text-[12px] text-gray-500">Occupancy</p>
+                <p className="text-[18px] font-semibold">
+                  {occupiedUnits} / {property.units}
+                </p>
+              </div>
+
+              <span
+                className={`h-fit px-4 py-1 rounded-full text-[12px] self-center ${
+                  isFull
+                    ? "bg-red-100 text-red-700"
+                    : "bg-green-100 text-green-700"
+                }`}
+              >
+                {isFull ? "Full" : "Active"}
+              </span>
+            </div>
           </div>
 
           {/* Tenants Table */}
