@@ -69,7 +69,7 @@ export default function PropertiesPage() {
             </div>
 
             <Link href="/properties/new">
-              <button className="px-5 py-2.5 rounded-lg text-white bg-gradient-to-r from-[#1A4D6D] to-teal-500 text-[14px] shadow-md hover:opacity-90 transition">
+              <button className="px-5 py-2.5 rounded-lg cursor-pointer text-white bg-gradient-to-r from-[#1A4D6D] to-teal-500 text-[14px] shadow-md hover:opacity-90 transition">
                 + Add Property
               </button>
             </Link>
@@ -98,7 +98,7 @@ export default function PropertiesPage() {
                 </p>
 
                 <Link href="/properties/new">
-                  <button className="mt-3 px-5 py-2.5 rounded-lg text-white bg-[#1A4D6D] hover:opacity-90 transition text-[14px]">
+                  <button className="mt-3 px-5 py-2.5 rounded-lg text-white cursor-pointer bg-[#1A4D6D] hover:opacity-90 transition text-[14px]">
                     + Add Property
                   </button>
                 </Link>

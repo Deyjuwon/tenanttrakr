@@ -127,7 +127,7 @@ export default function AddPropertyPage() {
           <Link href="/properties">
             <button
               type="button"
-              className="px-5 py-2.5 rounded-lg border text-gray-600"
+              className="px-5 py-2.5 cursor-pointer rounded-lg border text-gray-600"
             >
               Cancel
             </button>
@@ -135,7 +135,7 @@ export default function AddPropertyPage() {
 
           <button
             type="submit"
-            className="px-6 py-2.5 rounded-lg text-white bg-gradient-to-r from-[#1A4D6D] to-teal-500"
+            className="px-6 py-2.5 rounded-lg cursor-pointer text-white bg-gradient-to-r from-[#1A4D6D] to-teal-500"
           >
             Save Property
           </button>
