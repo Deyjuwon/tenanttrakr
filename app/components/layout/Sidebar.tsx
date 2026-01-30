@@ -49,7 +49,7 @@ export default function Sidebar() {
         </Link>
 
         <Link href="/tenant">
-          <div className={linkClasses(isActive("/rent"))}>
+          <div className={linkClasses(isActive("/tenant"))}>
             {isActive("/rent") && (
               <span className="absolute left-0 top-0 h-full w-[3px] bg-teal-500 rounded-r" />
             )}
