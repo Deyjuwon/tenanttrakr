@@ -48,6 +48,16 @@ export default function Sidebar() {
           </div>
         </Link>
 
+        <Link href="/tenant">
+          <div className={linkClasses(isActive("/rent"))}>
+            {isActive("/rent") && (
+              <span className="absolute left-0 top-0 h-full w-[3px] bg-teal-500 rounded-r" />
+            )}
+            <BsFillPeopleFill size={20} color="#1A4D6D" />
+            <p>Tenants</p>
+          </div>
+        </Link>
+
         <Link href="/rent">
           <div className={linkClasses(isActive("/rent"))}>
             {isActive("/rent") && (
